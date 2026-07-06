@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AbayHost | Ethiopia's Reliable Web Hosting Provider</title>
+<meta name="description" content="Fast, secure, and affordable web hosting in Ethiopia. Launch your website today with AbayHost for reliable performance and 24/7 support.">
+<meta property="og:title" content="AbayHost | Ethiopia's Reliable Web Hosting Provider">
+<meta property="og:description" content="NVMe-powered hosting, Cloud VPS, and domains built for Ethiopian businesses with 24/7 local support.">
+<meta property="og:url" content="https://abayhost.com">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/png" href="assets/abayhost-icon.png">
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header id="main-header">
+  <nav class="nav">
+    <a href="/" class="logo"><img src="assets/abayhost-icon.png" alt="" class="logo-icon">Abay<span>Host</span></a>
+    <div class="nav-links">
+      <a href="/webhosting">Web Hosting</a>
+      <a href="/vps">Cloud VPS</a>
+      <a href="/windows-vps">Windows VPS</a>
+      <a href="/vds">Servers</a>
+      <a href="/domain">Domains</a>
+      <a href="/contact">Contact</a>
+    </div>
+    <div class="nav-actions">
+      <a href="https://my.abayhost.com/clientarea.php" class="login">Client Login</a>
+      <a href="#packages" class="btn btn-primary btn-sm">Get Started</a>
+      <button class="nav-toggle" aria-label="Open menu" onclick="document.getElementById('mobileMenu').classList.add('open')">☰</button>
+    </div>
+  </nav>
+</header>
+
+<!-- ============ MOBILE MENU ============ -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="close-btn" aria-label="Close menu" onclick="document.getElementById('mobileMenu').classList.remove('open')">×</button>
+  <a href="/webhosting">Web Hosting</a>
+  <a href="/vps">Cloud VPS</a>
+  <a href="/windows-vps">Windows VPS</a>
+  <a href="/vds">Servers</a>
+  <a href="/domain">Domains</a>
+  <a href="/contact">Contact</a>
+  <a href="https://my.abayhost.com/clientarea.php">Client Login</a>
+</div>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <svg class="current-line" viewBox="0 0 1440 420" preserveAspectRatio="none" aria-hidden="true">
+    <path class="base-path" d="M-50,260 C 250,150 420,340 700,220 C 980,100 1150,300 1490,180" />
+    <path class="flow-path" d="M-50,260 C 250,150 420,340 700,220 C 980,100 1150,300 1490,180" />
+    <circle class="node" cx="250" cy="176" r="4"></circle>
+    <circle class="node" cx="700" cy="220" r="4"></circle>
+    <circle class="node" cx="980" cy="147" r="4"></circle>
+    <circle class="node" cx="1300" cy="257" r="4"></circle>
+  </svg>
+
+  <div class="wrap hero-inner">
+    <div class="hero-copy">
+      <span class="eyebrow">Hosted &amp; supported from Ethiopia</span>
+      <h1>The current that keeps<br><em>your website online.</em></h1>
+      <p class="lead">NVMe-powered hosting, VPS, and domains built for Ethiopian businesses — with 24/7 local support and a 99.9% uptime guarantee.</p>
+
+      <div class="domain-box">
+        <input type="text" placeholder="Find or transfer your domain — e.g. yourbusiness.com">
+        <div class="tabs">
+          <button class="active">Search</button>
+          <button>Transfer</button>
+        </div>
+      </div>
+
+      <div class="hero-ctas">
+        <a href="#packages" class="btn btn-primary">See hosting plans</a>
+        <a href="/webhosting" class="btn btn-outline-light">Free migration, no downtime</a>
+      </div>
+    </div>
+
+    <div class="hero-3d" aria-label="AbayHost reliability at a glance">
+      <div class="hero-3d-stage">
+        <article class="float-card c1">
+          <span class="fc-tag">UPTIME</span>
+          <div class="fc-title">99.9% guaranteed</div>
+        </article>
+        <article class="float-card c2">
+          <span class="fc-tag">STORAGE</span>
+          <div class="fc-title">NVMe SSD — 20x faster</div>
+        </article>
+        <article class="float-card c3">
+          <span class="fc-tag">SUPPORT</span>
+          <div class="fc-title">24/7 local experts</div>
+        </article>
+        <article class="float-card c4">
+          <span class="fc-tag">LICENSED</span>
+          <div class="fc-title">ECA certified provider</div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+<svg class="wave-divider" viewBox="0 0 1440 46" preserveAspectRatio="none" aria-hidden="true">
+  <path d="M0,20 C 360,50 1080,-10 1440,20 L1440,46 L0,46 Z"></path>
+</svg>
+
+<!-- ============ STATS STRIP ============ -->
+<section class="stats-strip">
+  <div class="wrap">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <div class="stat-number" data-target="500">0</div>
+        <div class="stat-label">Websites hosted</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">99.9%</div>
+        <div class="stat-label">Uptime guarantee</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">24/7</div>
+        <div class="stat-label">Local support</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-target="5">0</div>
+        <div class="stat-label">Stars on Google</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ QUICK PRICING ============ -->
+<section id="packages">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Start here</span>
+      <h2>Pick what your site needs today</h2>
+    </div>
+    <div class="quick-grid">
+      <a href="/webhosting" class="quick-card">
+        <div class="quick-card-icon">🌐</div>
+        <h3>Web Hosting</h3>
+        <div class="price">4,700<small> ETB / year</small></div>
+        <ul class="quick-feats">
+          <li>✓ cPanel + Free SSL</li>
+          <li>✓ NVMe SSD storage</li>
+          <li>✓ Free .com domain</li>
+        </ul>
+        <span class="btn btn-outline-dark btn-block btn-sm">Start now</span>
+      </a>
+      <a href="/vps" class="quick-card">
+        <div class="quick-card-icon">⚡</div>
+        <h3>Cloud VPS</h3>
+        <div class="price">3,950<small> ETB / month</small></div>
+        <ul class="quick-feats">
+          <li>✓ Full root access</li>
+          <li>✓ NVMe SSD</li>
+          <li>✓ Scalable resources</li>
+        </ul>
+        <span class="btn btn-outline-dark btn-block btn-sm">Start now</span>
+      </a>
+      <a href="/windows-vps" class="quick-card">
+        <div class="quick-card-icon">🪟</div>
+        <h3>Windows VPS</h3>
+        <div class="price">8,950<small> ETB / month</small></div>
+        <ul class="quick-feats">
+          <li>✓ Windows Server</li>
+          <li>✓ RDP access</li>
+          <li>✓ Managed support</li>
+        </ul>
+        <span class="btn btn-outline-dark btn-block btn-sm">Start now</span>
+      </a>
+      <a href="/domain" class="quick-card">
+        <div class="quick-card-icon">🔗</div>
+        <h3>Domains</h3>
+        <div class="price">3,350<small> ETB / year</small></div>
+        <ul class="quick-feats">
+          <li>✓ Free WHOIS privacy</li>
+          <li>✓ Easy transfer</li>
+          <li>✓ DNS management</li>
+        </ul>
+        <span class="btn btn-outline-dark btn-block btn-sm">Start now</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRICING TIERS ============ -->
+<section>
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="eyebrow">Web hosting plans</span>
+      <h2>Reliable hosting, sized to your site</h2>
+      <p>cPanel, daily backups, free SSL, and 24/7 expert support on every plan — pick the resources that match where your site is headed.</p>
+    </div>
+
+    <div class="pricing-grid">
+      <!-- Free -->
+      <a href="https://my.abayhost.com/register.php" class="plan free">
+        <span class="badge">Free forever</span>
+        <h3>Starter</h3>
+        <p class="desc">Try AbayHost at no cost — perfect for your first site or a quick test project.</p>
+        <div class="price">0<small> ETB / forever</small></div>
+        <span class="btn btn-outline-dark btn-block">Start free</span>
+        <ul class="features">
+          <li>&#10003; Host <b>1</b> website</li>
+          <li>&#10003; <b>5GB</b> NVMe SSD storage</li>
+          <li>&#10003; <b>Free</b> SSL certificate</li>
+          <li>&#10003; <b>Free</b> subdomain included</li>
+          <li>&#10003; <b>Free</b> cPanel access</li>
+          <li>&#10003; <b>Free</b> daily backups</li>
+          <li>&#10003; 1 email account</li>
+          <li>&#10003; 1 MySQL database</li>
+          <li>&#10003; Community support</li>
+        </ul>
+      </a>
+
+      <!-- Standard -->
+      <a href="https://my.abayhost.com/cart.php?a=add&pid=1&carttpl=standard_cart" class="plan">
+        <h3>Standard</h3>
+        <p class="desc">Reliable hosting for personal websites and blogs.</p>
+        <div class="price">4,700<small> ETB / year</small></div>
+        <span class="btn btn-primary btn-block">Order now</span>
+        <ul class="features">
+          <li>&#10003; Host <b>2</b> websites</li>
+          <li>&#10003; <b>60GB</b> NVMe SSD storage</li>
+          <li>&#10003; 2 CPU cores (LVE)</li>
+          <li>&#10003; <b>6 GB RAM</b></li>
+          <li>&#10003; <b>Unlimited</b> bandwidth &amp; subdomains</li>
+          <li>&#10003; <b>Unlimited</b> email accounts</li>
+          <li>&#10003; <b>Unlimited</b> MySQL &amp; PostgreSQL DB</li>
+          <li>&#10003; cPanel control panel</li>
+          <li>&#10003; LiteSpeed web server</li>
+          <li>&#10003; Free SSL &amp; daily backups</li>
+          <li>&#10003; Free .com domain (1st year)</li>
+          <li>&#10003; Node.js &amp; Python supported</li>
+        </ul>
+      </a>
+
+      <!-- Business -->
+      <a href="https://my.abayhost.com/cart.php?a=add&pid=2&carttpl=standard_cart" class="plan featured">
+        <span class="badge">Most popular</span>
+        <h3>Business</h3>
+        <p class="desc">Enhanced performance for growing businesses.</p>
+        <div class="price">5,600<small> ETB / year</small></div>
+        <span class="btn btn-primary btn-block">Order now</span>
+        <ul class="features">
+          <li>&#10003; Host <b>10</b> websites</li>
+          <li>&#10003; <b>120GB</b> NVMe SSD storage</li>
+          <li>&#10003; 2 CPU cores (LVE)</li>
+          <li>&#10003; <b>6 GB RAM</b></li>
+          <li>&#10003; <b>Unlimited</b> bandwidth &amp; subdomains</li>
+          <li>&#10003; <b>Unlimited</b> email accounts</li>
+          <li>&#10003; <b>Unlimited</b> MySQL &amp; PostgreSQL DB</li>
+          <li>&#10003; cPanel control panel</li>
+          <li>&#10003; LiteSpeed web server</li>
+          <li>&#10003; Free SSL &amp; daily backups</li>
+          <li>&#10003; Free .com domain (1st year)</li>
+          <li>&#10003; Node.js &amp; Python supported</li>
+        </ul>
+      </a>
+
+      <!-- Premium -->
+      <a href="https://my.abayhost.com/cart.php?a=add&pid=3&carttpl=standard_cart" class="plan">
+        <h3>Premium</h3>
+        <p class="desc">Maximum speed and resources for high-traffic sites.</p>
+        <div class="price">6,500<small> ETB / year</small></div>
+        <span class="btn btn-primary btn-block">Order now</span>
+        <ul class="features">
+          <li>&#10003; Host <b>20</b> websites</li>
+          <li>&#10003; <b>250GB</b> NVMe SSD storage</li>
+          <li>&#10003; <b>4 CPU cores</b> (LVE)</li>
+          <li>&#10003; <b>6 GB RAM</b></li>
+          <li>&#10003; Unlimited bandwidth &amp; subdomains</li>
+          <li>&#10003; Unlimited email accounts</li>
+          <li>&#10003; Unlimited MySQL &amp; PostgreSQL DB</li>
+          <li>&#10003; cPanel control panel</li>
+          <li>&#10003; LiteSpeed web server</li>
+          <li>&#10003; Free SSL &amp; daily backups</li>
+          <li>&#10003; Free .com domain (1st year)</li>
+          <li>&#10003; Node.js &amp; Python supported</li>
+        </ul>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURES ============ -->
+<section class="feature-band">
+  <div class="wrap">
+    <div class="fb-header">
+      <div class="fb-header-left">
+        <span class="eyebrow">Built in</span>
+        <h2>Everything your site needs,<br><em>already included.</em></h2>
+      </div>
+      <p class="fb-header-desc">Whether it's a personal blog or a high-traffic store, every plan runs on the same battle-tested, secure foundation — no extra charges, no hidden limits.</p>
+    </div>
+
+    <div class="fb-tabs" role="tablist">
+      <button class="fb-tab active" role="tab" data-tab="control" aria-selected="true">
+        <span class="fb-tab-icon">🎛️</span>
+        Simplicity &amp; Control
+      </button>
+      <button class="fb-tab" role="tab" data-tab="security" aria-selected="false">
+        <span class="fb-tab-icon">🔒</span>
+        Security &amp; Reliability
+      </button>
+      <button class="fb-tab" role="tab" data-tab="performance" aria-selected="false">
+        <span class="fb-tab-icon">⚡</span>
+        Performance &amp; Growth
+      </button>
+    </div>
+
+    <div class="fb-panels">
+
+      <!-- Panel 1: Control -->
+      <div class="fb-panel active" data-panel="control">
+        <div class="fb-panel-grid">
+          <div class="fb-panel-intro">
+            <h3>Your site, your control</h3>
+            <p>Manage every aspect of your hosting from one clean, intuitive dashboard. No terminal skills required — everything is a click away.</p>
+            <a href="/webhosting" class="btn btn-primary btn-sm">Explore web hosting →</a>
+          </div>
+          <div class="fb-feature-cards">
+            <div class="fb-feat">
+              <div class="fb-feat-icon">📁</div>
+              <div>
+                <h4>cPanel Control Panel</h4>
+                <p>The world's most trusted hosting panel. Manage files, databases, email, and more.</p>
+              </div>
+            </div>
+            <div class="fb-feat">
+              <div class="fb-feat-icon">🗂️</div>
+              <div>
+                <h4>Online File Manager</h4>
+                <p>Upload, edit, and organize your website files directly from your browser — no FTP needed.</p>
+              </div>
+            </div>
+            <div class="fb-feat">
+              <div class="fb-feat-icon">🌐</div>
+              <div>
+                <h4>Easy Domain Manager</h4>
+                <p>Add, park, and redirect domains in seconds. Full DNS control included.</p>
+              </div>
+            </div>
+            <div class="fb-feat">
+              <div class="fb-feat-icon">📦</div>
+              <div>
+                <h4>200+ One-Click Apps</h4>
+                <p>Install WordPress, Joomla, Magento, and 200+ more apps in a single click via Softaculous.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Panel 2: Security -->
+      <div class="fb-panel" data-panel="security">
+        <div class="fb-panel-grid">
+          <div class="fb-panel-intro">
+            <h3>Secure by default</h3>
+            <p>We protect your site around the clock so you can focus on growing your business, not worrying about attacks or data loss.</p>
+            <a href="/contact" class="btn btn-primary btn-sm">Talk to our team →</a>
+          </div>
+          <div class="fb-feature-cards">
+            <div class="fb-feat">
+              <div class="fb-feat-icon">🔐</div>
+              <div>
+                <h4>Free SSL Certificate</h4>
+                <p>Every site gets HTTPS automatically. No manual installation, no renewal fees — ever.</p>
+              </div>
+            </div>
+            <div class="fb-feat">
+              <div class="fb-feat-icon">💾</div>
+              <div>
+                <h4>Daily Automated Backups</h4>
+                <p>Your files and databases are backed up every day. Restore with one click if anything goes wrong.</p>
+              </div>
+            </div>
+            <div class="fb-feat">
+              <div class="fb-feat-icon">🛡️</div>
+              <div>
+                <h4>DDoS &amp; Brute-Force Protection</h4>
+                <p>Real-time traffic filtering stops attacks before they reach your site — powered by CloudLinux.</p>
+              </div>
+            </div>
+            <div class="fb-feat">
+              <div class="fb-feat-icon">💬</div>
+              <div>
+                <h4>24/7 Expert Support</h4>
+                <p>Local engineers available around the clock via live chat, email, or ticket — in Amharic or English.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Panel 3: Performance -->
+      <div class="fb-panel" data-panel="performance">
+        <div class="fb-panel-grid">
+          <div class="fb-panel-intro">
+            <h3>Speed that converts</h3>
+            <p>A fast website keeps visitors engaged and ranks higher on Google. We give you the infrastructure to compete at the highest level.</p>
+            <a href="/vps" class="btn btn-primary btn-sm">See VPS plans →</a>
+          </div>
+          <div class="fb-feature-cards">
+            <div class="fb-feat">
+              <div class="fb-feat-icon">🚀</div>
+              <div>
+                <h4>NVMe SSD Storage</h4>
+                <p>Up to 20x faster than standard hard disks. Pages load in milliseconds, not seconds.</p>
+              </div>
+            </div>
+            <div class="fb-feat">
+              <div class="fb-feat-icon">⚙️</div>
+              <div>
+                <h4>LiteSpeed Web Server</h4>
+                <p>LiteSpeed handles traffic spikes without breaking a sweat — far outperforming Apache and Nginx.</p>
+              </div>
+            </div>
+            <div class="fb-feat">
+              <div class="fb-feat-icon">🐘</div>
+              <div>
+                <h4>PHP 7.4 – 8.3 &amp; Modern Stack</h4>
+                <p>Choose your PHP version. Full support for Node.js, Python, MySQL, and PostgreSQL.</p>
+              </div>
+            </div>
+            <div class="fb-feat">
+              <div class="fb-feat-icon">🔄</div>
+              <div>
+                <h4>Advanced Caching</h4>
+                <p>Built-in object caching and WordPress optimization reduce server load and improve TTFB dramatically.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY ABAYHOST ============ -->
+<section class="why-section">
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="eyebrow">Why choose us</span>
+      <h2>Built for Ethiopian businesses, by Ethiopians</h2>
+      <p>We understand the unique needs of local businesses — from payment methods to local support language and network peering.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon">🏛️</div>
+        <h3>ECA Licensed</h3>
+        <p>Officially licensed by the Ethiopian Communications Authority — regulated and trusted by the government.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🌍</div>
+        <h3>Local Network Peering</h3>
+        <p>Direct peering with Ethio Telecom and Safaricom delivers ultra-low latency for Ethiopian visitors.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">💬</div>
+        <h3>Amharic Support</h3>
+        <p>Our support team speaks your language. Get help in Amharic or English, 24 hours a day.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">💳</div>
+        <h3>Local Payment Methods</h3>
+        <p>Pay with telebirr, CBE Birr, Dashen Bank, Awash Bank, Hibret Bank, or Bank of Abyssinia.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🔄</div>
+        <h3>Free Migration</h3>
+        <p>Our engineers move your site to AbayHost for free — no downtime, no data loss, no stress.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🛡️</div>
+        <h3>30-Day Money Back</h3>
+        <p>Not happy? Get a full refund within 30 days, no questions asked.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="datacenter-section">
+  <div class="wrap">
+    <div class="datacenter-grid">
+      <div class="datacenter-content">
+        <span class="eyebrow">High Performance Infrastructure</span>
+        <h2>Addis Ababa Datacenter<br>&amp; Global Cloud Nodes</h2>
+        <p>Your website deserves local speed and global reliability. We serve Ethiopian traffic with ultra-low latency from servers optimized for local networks, with direct connectivity to global Tier-1 cloud exchanges.</p>
+        <div class="dc-stats">
+          <div class="dc-stat">
+            <span class="dc-stat-num">20×</span>
+            <span class="dc-stat-label">faster than SATA</span>
+          </div>
+          <div class="dc-stat">
+            <span class="dc-stat-num">99.9%</span>
+            <span class="dc-stat-label">uptime SLA</span>
+          </div>
+          <div class="dc-stat">
+            <span class="dc-stat-num">&lt;5ms</span>
+            <span class="dc-stat-label">local latency</span>
+          </div>
+        </div>
+      </div>
+      <div class="datacenter-specs">
+        <div class="spec-box">
+          <div class="spec-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+          </div>
+          <div>
+            <h4>NVMe Storage</h4>
+            <p>Supercharged NVMe SSD drives that load pages up to 20× faster than standard SATA hard disks.</p>
+          </div>
+        </div>
+        <div class="spec-box">
+          <div class="spec-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <div>
+            <h4>99.9% Uptime</h4>
+            <p>Redundant power, network links, and automated failover monitoring guarantees high availability.</p>
+          </div>
+        </div>
+        <div class="spec-box">
+          <div class="spec-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <div>
+            <h4>Local Latency</h4>
+            <p>Peering routes with Ethio Telecom and Safaricom for faster loading times in Addis and regions.</p>
+          </div>
+        </div>
+        <div class="spec-box">
+          <div class="spec-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div>
+            <h4>DDoS Shield</h4>
+            <p>Advanced real-time packet filtering keeps your site online even during sophisticated web attacks.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA BANNER ============ -->
+<section class="cta-banner">
+  <div class="wrap cta-inner">
+    <div>
+      <span class="eyebrow">Why wait?</span>
+      <h2>Get your website online today</h2>
+      <p class="lead">Fast, secure, affordable hosting designed to help you succeed from day one.</p>
+      <ul class="checklist">
+        <li>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          Instant account setup — get started in minutes, not days
+        </li>
+        <li>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          24/7 expert support, whenever you need help
+        </li>
+        <li>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          99.9% uptime guarantee — your site stays online, always
+        </li>
+      </ul>
+    </div>
+    <div class="cta-panel">
+      <span class="eyebrow">Web hosting from</span>
+      <div class="price-tag">4,700 ETB<small style="font-size:1rem;">/yr</small></div>
+      <a href="#packages" class="btn btn-primary btn-block">Get started now</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRUST BAND ============ -->
+<section class="trust">
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="eyebrow">Trusted across Ethiopia</span>
+      <h2>Businesses, developers, and agencies host with AbayHost</h2>
+      <div class="stars">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <span class="mono" style="color:var(--ink); font-size:0.9rem; margin-left:6px;">5.0 on Google Reviews</span>
+      </div>
+    </div>
+
+    <div class="trust-cert-row">
+      <div class="trust-cert">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+        <span>Licensed by ECA</span>
+      </div>
+      <div class="trust-cert">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        <span>cPanel Certified</span>
+      </div>
+      <div class="trust-cert">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        <span>LiteSpeed Powered</span>
+      </div>
+      <div class="trust-cert">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <span>CloudLinux Secured</span>
+      </div>
+      <div class="trust-cert">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        <span>SSL Encrypted</span>
+      </div>
+    </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="testimonials-section">
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="eyebrow">Customer Stories</span>
+      <h2>Trusted by Ethiopia's top digital brands</h2>
+      <p>Hear from some of the startups, e-commerce brands, and agencies that trust their uptime to AbayHost.</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <svg class="quote-icon" width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+        <p class="testimonial-text">"We migrated our entire portal to AbayHost. Uptime has been flawless, and our local loading speed improved dramatically for users across Addis."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">KM</div>
+          <div>
+            <div class="testimonial-name">Kidus M.</div>
+            <div class="testimonial-company">E-commerce Founder</div>
+          </div>
+          <div class="testimonial-stars">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <svg class="quote-icon" width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+        <p class="testimonial-text">"As a design agency, we need reliable hosting for our client handoffs. AbayHost's cPanel setup and daily backups give us complete peace of mind."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">TB</div>
+          <div>
+            <div class="testimonial-name">Tewodros B.</div>
+            <div class="testimonial-company">Creative Director, Yohana Design</div>
+          </div>
+          <div class="testimonial-stars">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <svg class="quote-icon" width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+        <p class="testimonial-text">"Whenever we need help, their support is online and responds within minutes. Unmatched local customer service in Ethiopia."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">SN</div>
+          <div>
+            <div class="testimonial-name">Saron N.</div>
+            <div class="testimonial-company">IT Operations, Zemen Tech</div>
+          </div>
+          <div class="testimonial-stars">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="faq-section">
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="eyebrow">Questions</span>
+      <h2>Frequently asked questions</h2>
+      <p>Everything you need to know before you get started. Can't find your answer? <a href="/contact" class="faq-contact-link">Contact us</a>.</p>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q">
+          What makes AbayHost different from other hosts in Ethiopia?
+          <span class="faq-chevron">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </span>
+        </button>
+        <div class="faq-a"><p>We are ECA-licensed, run NVMe servers from an Addis Ababa datacenter with Ethio Telecom peering, and offer 24/7 support in Amharic and English. Every plan includes LiteSpeed, cPanel, free SSL, and daily backups.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">
+          Can I upgrade or downgrade my plan later?
+          <span class="faq-chevron">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </span>
+        </button>
+        <div class="faq-a"><p>Yes — you can change plans at any time from your client area as your website's needs grow or change.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">
+          Do you provide free migration from another host?
+          <span class="faq-chevron">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </span>
+        </button>
+        <div class="faq-a"><p>Yes. Our engineers migrate your website files and databases to AbayHost quickly and safely at no extra cost, with zero downtime.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">
+          Is SSL included with every plan?
+          <span class="faq-chevron">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </span>
+        </button>
+        <div class="faq-a"><p>Every hosting plan — including the free Starter plan — includes a free SSL certificate that auto-renews. No manual setup required.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">
+          What support is available if something goes wrong?
+          <span class="faq-chevron">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </span>
+        </button>
+        <div class="faq-a"><p>24/7 support via live chat, email (info@abayhost.com), phone (+251 988 20 20 20), and ticket system — resolved by local engineers who know Ethiopian networks.</p></div>
+      </div>
+    </div>
+
+    <div class="guarantee">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+      <div>
+        <h4>30-day money-back guarantee</h4>
+        <p>Not 100% satisfied with AbayHost? Get a full refund — no hassle, no risk.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PAYMENT METHODS ============ -->
+<section class="payment-band">
+  <div class="payment-label-row">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+    We accept payments via
+  </div>
+  <div class="payment-marquee-wrap">
+    <div class="payment-marquee-track">
+      <img src="assets/bank/cbe.jpg" alt="CBE">
+      <img src="assets/bank/abyssinia.jpg" alt="Bank of Abyssinia">
+      <img src="assets/bank/awash-bank.jpg" alt="Awash Bank">
+      <img src="assets/bank/dashbank.png" alt="Dashen Bank">
+      <img src="assets/bank/telebirr.jpg" alt="telebirr">
+      <img src="assets/bank/cbe.jpg" alt="CBE">
+      <img src="assets/bank/abyssinia.jpg" alt="Bank of Abyssinia">
+      <img src="assets/bank/awash-bank.jpg" alt="Awash Bank">
+      <img src="assets/bank/dashbank.png" alt="Dashen Bank">
+      <img src="assets/bank/telebirr.jpg" alt="telebirr">
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap footer-top">
+    <div class="footer-brand">
+      <a href="/" class="logo"><img src="assets/abayhost-icon.png" alt="" class="logo-icon">Abay<span>Host</span></a>
+      <p>Ethiopia's reliable domain &amp; web hosting provider. Secure, affordable, and always online.</p>
+      <div class="social-row">
+        <a href="https://facebook.com/abayhost" aria-label="Facebook">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <a href="https://instagram.com/abayhost" aria-label="Instagram">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+        <a href="https://tiktok.com/@abayhost" aria-label="TikTok">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/></svg>
+        </a>
+        <a href="https://linkedin.com/company/abayhost" aria-label="LinkedIn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a href="https://x.com/abayhost" aria-label="X / Twitter">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        <a href="https://t.me/abayhost" aria-label="Telegram">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8l-1.7 8c-.12.57-.46.71-.93.44l-2.57-1.9-1.24 1.19c-.14.13-.25.25-.51.25l.18-2.62 4.72-4.26c.21-.18-.04-.28-.32-.1L7.6 14.36l-2.49-.78c-.54-.17-.55-.54.12-.8l9.72-3.75c.45-.16.85.11.69.77z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>Company &amp; Services</h5>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/pricing">Pricing</a></li>
+        <li><a href="/domain">Domain</a></li>
+        <li><a href="https://my.abayhost.com/cart.php?a=add&domain=transfer">Transfer Domain</a></li>
+        <li><a href="/vps">Cloud VPS</a></li>
+        <li><a href="/vds">Cloud VDS</a></li>
+        <li><a href="/wordpress">WordPress</a></li>
+        <li><a href="/webhosting">Web Hosting</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Resources</h5>
+      <ul>
+        <li><a href="/about">About</a></li>
+        <li><a href="/faq">FAQ</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="https://my.abayhost.com/knowledgebase">Knowledgebase</a></li>
+        <li><a href="https://my.abayhost.com/announcements">Announcements</a></li>
+        <li><a href="/refundpolicy">Refund Policy</a></li>
+        <li><a href="/privacypolicy">Privacy Policy</a></li>
+        <li><a href="/tos">Terms of Service</a></li>
+        <li><a href="/terms&conditions">Terms &amp; Conditions</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contact us</h5>
+      <ul>
+        <li><a href="tel:+251988202020">+251 988 20 20 20</a></li>
+        <li><a href="mailto:info@abayhost.com">info@abayhost.com</a></li>
+        <li><a href="/contact">Contact form</a></li>
+        <li><a href="https://my.abayhost.com/clientarea.php">Client login</a></li>
+        <li><a href="https://t.me/AbayHostSupport">Support chat</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    (c) 2026 AbayHostTM, a service of <a href="index.html" class="footer-yaye-link">YayeTech Technologies</a>. All rights reserved.
+  </div>
+</footer>
+
+<!-- ---------- SCROLL TO TOP BUTTON ---------- -->
+<button id="scroll-top" aria-label="Scroll to top">↑</button>
+
+<!-- ---------- CHAT WIDGET ---------- -->
+<button id="chat-launcher" aria-label="Open support chat" aria-expanded="false">
+  <span class="dot"></span>
+  <svg id="icon-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+  <svg id="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="display:none;"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+</button>
+
+<div id="chat-panel" role="dialog" aria-label="AbayHost support chat">
+  <div class="chat-head">
+    <div class="chat-head-info">
+      <div class="avatar mono">AH</div>
+      <div>
+        <p class="name">AbayHost Support</p>
+        <p class="status mono">Online now</p>
+      </div>
+    </div>
+    <button id="chat-close" aria-label="Close chat">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="chat-body" id="chat-body"></div>
+  <div class="chat-input-row">
+    <input id="chat-input" type="text" placeholder="Type your message..." autocomplete="off">
+    <button id="chat-send" aria-label="Send message">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    </button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

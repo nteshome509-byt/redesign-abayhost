@@ -1,0 +1,1620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YayeTech - Software, Web3 & Cloud Infrastructure</title>
+<meta name="description" content="We build the systems your business runs on. YayeTech designs and ships web platforms, blockchain-based applications, and cloud hosting infrastructure.">
+<meta property="og:title" content="YayeTech - Software, Web3 & Cloud Infrastructure">
+<meta property="og:description" content="We build the systems your business runs on. Web platforms, decentralized apps, and managed cloud environments.">
+<meta property="og:image" content="https://yayetech.com/wp-content/uploads/2024/10/cropped-cropped-cropped-cropped-YayeTechlogo4.png">
+<meta property="og:url" content="https://yayetech.com">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+Ethiopic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1D5068;
+    --ink-soft:#24647F;
+    --onyx:#123245;
+    --paper:#EAF4F3;
+    --paper-dim:#DCEDEC;
+    --slate:#5F8A93;
+    --line:#CFE3E1;
+    --brass:#2FA79A;
+    --brass-bright:#3FC6B5;
+    --brass-glow:rgba(63,198,181,0.16);
+    --teal:#1B6B7A;
+    --mint:#7FDCC4;
+    --white:#FFFFFF;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter', sans-serif;
+    -webkit-font-smoothing:antialiased;
+    transition:font-family .1s;
+  }
+  body.lang-am, body.lang-am input, body.lang-am textarea, body.lang-am button{
+    font-family:'Noto Sans Ethiopic','Inter',sans-serif;
+  }
+  h1,h2,h3{
+    font-family:'Fraunces', serif;
+    margin:0;
+    letter-spacing:-0.01em;
+  }
+  body.lang-am h1, body.lang-am h2, body.lang-am h3{
+    font-family:'Noto Sans Ethiopic','Fraunces',serif;
+    letter-spacing:0;
+  }
+  .mono{
+    font-family:'IBM Plex Mono', monospace;
+    letter-spacing:0.02em;
+  }
+  a{color:inherit;text-decoration:none;}
+  .wrap{
+    max-width:1180px;
+    margin:0 auto;
+    padding:0 32px;
+  }
+  @media(max-width:700px){ .wrap{padding:0 20px;} }
+
+  /* ---------- NAV ---------- */
+  header{
+    position:sticky;top:0;z-index:100;
+    background:rgba(247,249,251,0.92);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{
+    display:flex;align-items:center;justify-content:space-between;
+    height:78px;
+    gap:20px;
+  }
+  .logo{
+    display:flex;align-items:center;gap:10px;
+    font-family:'Fraunces',serif;
+    font-weight:600;
+    font-size:1.05rem;
+    flex-shrink:0;
+  }
+  .logo img{
+    height:56px;
+    width:auto;
+    display:block;
+  }
+  .logo .mark-fallback{
+    display:none;
+    width:32px;height:32px;
+    background:var(--ink);
+    color:var(--brass-bright);
+    align-items:center;justify-content:center;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:0.75rem;
+    font-weight:500;
+  }
+  nav.links{
+    display:flex;gap:32px;
+    font-size:0.92rem;
+    font-weight:500;
+    color:var(--slate);
+    flex:1;
+    justify-content:center;
+  }
+  nav.links a{ position:relative; padding:4px 0; }
+  nav.links a::after{
+    content:'';
+    position:absolute; left:0; bottom:-2px;
+    width:0; height:2px;
+    background:var(--brass-bright);
+    transition:width .18s ease;
+  }
+  nav.links a:hover{color:var(--ink);}
+  nav.links a:hover::after{ width:100%; }
+  @media(max-width:900px){ nav.links{display:none;} .nav-cta{display:none;} }
+
+  .nav-right{ display:flex; align-items:center; gap:14px; flex-shrink:0; }
+
+  #lang-toggle{
+    display:flex;
+    border:1px solid var(--line);
+    font-family:'IBM Plex Mono',monospace;
+    font-size:0.76rem;
+    overflow:hidden;
+  }
+  #lang-toggle button{
+    border:none;
+    background:var(--white);
+    color:var(--slate);
+    padding:9px 13px;
+    cursor:pointer;
+    font-family:inherit;
+    font-size:inherit;
+    transition:background .15s ease, color .15s ease;
+  }
+  #lang-toggle button.active{
+    background:var(--ink);
+    color:var(--paper);
+  }
+  #lang-toggle button:not(.active):hover{ background:var(--paper-dim); color:var(--ink); }
+
+  .btn{
+    padding:13px 24px;
+    font-size:0.88rem;
+    font-weight:600;
+    border:none;
+    background:var(--ink);
+    color:var(--paper);
+    cursor:pointer;
+    transition:transform .12s ease, box-shadow .12s ease;
+    display:inline-block;
+    font-family:inherit;
+    position:relative;
+    box-shadow:0 5px 0 var(--onyx), 0 10px 18px rgba(18,50,69,0.25);
+  }
+  .btn:hover{ transform:translateY(-2px); box-shadow:0 7px 0 var(--onyx), 0 14px 22px rgba(18,50,69,0.3); }
+  .btn:active{ transform:translateY(3px); box-shadow:0 2px 0 var(--onyx), 0 4px 10px rgba(18,50,69,0.25); }
+  .btn.outline{ background:var(--white); color:var(--ink); box-shadow:0 5px 0 var(--line), 0 10px 18px rgba(18,50,69,0.08); }
+  .btn.outline:hover{ box-shadow:0 7px 0 var(--line), 0 14px 22px rgba(18,50,69,0.12); }
+  .btn.brass{ background:var(--brass-bright); color:var(--ink); box-shadow:0 5px 0 var(--brass), 0 10px 20px rgba(63,198,181,0.35); }
+  .btn.brass:hover{ box-shadow:0 7px 0 var(--brass), 0 16px 26px rgba(63,198,181,0.4); }
+
+  /* mobile menu toggle */
+  #menu-btn{
+    display:none;
+    background:none; border:none; cursor:pointer;
+    width:40px;height:40px;
+    align-items:center; justify-content:center;
+    flex-direction:column; gap:5px;
+  }
+  #menu-btn span{
+    display:block; width:22px; height:2px; background:var(--ink);
+    transition:transform .2s ease, opacity .2s ease;
+  }
+  #menu-btn.open span:nth-child(1){ transform:translateY(7px) rotate(45deg); }
+  #menu-btn.open span:nth-child(2){ opacity:0; }
+  #menu-btn.open span:nth-child(3){ transform:translateY(-7px) rotate(-45deg); }
+  @media(max-width:900px){ #menu-btn{display:flex;} }
+
+  #mobile-menu{
+    display:none;
+    flex-direction:column;
+    background:var(--white);
+    border-bottom:1px solid var(--line);
+    padding:8px 0 20px;
+  }
+  #mobile-menu.open{ display:flex; }
+  #mobile-menu a{
+    padding:14px 32px;
+    font-size:0.98rem;
+    font-weight:500;
+    border-top:1px solid var(--line);
+  }
+  #mobile-menu .btn{ margin:16px 32px 0; text-align:center; }
+
+  .hero-inner{
+    display:grid;
+    grid-template-columns:1.1fr 0.9fr;
+    align-items:center;
+    gap:40px;
+  }
+  @media(max-width:900px){ .hero-inner{grid-template-columns:1fr;} }
+
+  .hero-3d{
+    position:relative;
+    height:420px;
+    perspective:1400px;
+  }
+  @media(max-width:900px){ .hero-3d{height:280px; margin-top:20px;} }
+  .hero-3d-stage{
+    position:absolute; inset:0;
+    transform-style:preserve-3d;
+    transition:transform .1s ease-out;
+  }
+  .float-card{
+    position:absolute;
+    width:230px;
+    padding:22px 24px;
+    border-radius:16px;
+    box-shadow:0 25px 50px rgba(18,50,69,0.28), inset 0 1px 0 rgba(255,255,255,0.4);
+    backdrop-filter:blur(6px);
+    animation:bob 6s ease-in-out infinite;
+  }
+  .float-card .fc-tag{ font-family:'IBM Plex Mono',monospace; font-size:0.7rem; opacity:0.85; margin-bottom:8px; display:block; }
+  .float-card .fc-title{ font-family:'Fraunces',serif; font-size:1.15rem; font-weight:500; }
+  .float-card.c1{
+    top:10%; left:2%; z-index:3;
+    background:linear-gradient(155deg, #ffffff, #EAF4F3);
+    color:var(--ink);
+    transform:translateZ(60px) rotateY(-8deg) rotateX(4deg);
+    animation-delay:0s;
+  }
+  .float-card.c2{
+    top:42%; left:32%; z-index:2;
+    background:linear-gradient(155deg, var(--brass-bright), var(--brass));
+    color:var(--ink);
+    transform:translateZ(110px) rotateY(-4deg) rotateX(-3deg);
+    animation-delay:1.4s;
+  }
+  .float-card.c3{
+    top:6%; left:56%; z-index:1;
+    background:linear-gradient(155deg, var(--ink-soft), var(--ink));
+    color:var(--paper);
+    transform:translateZ(30px) rotateY(10deg) rotateX(3deg);
+    animation-delay:0.7s;
+  }
+  @keyframes bob{
+    0%,100%{ transform:translateZ(var(--tz,60px)) rotateY(var(--ry,0deg)) rotateX(var(--rx,0deg)) translateY(0); }
+    50%{ transform:translateZ(var(--tz,60px)) rotateY(var(--ry,0deg)) rotateX(var(--rx,0deg)) translateY(-14px); }
+  }
+  @media (prefers-reduced-motion:reduce){ .float-card{ animation:none; } .hero-3d-stage{ transition:none; } }
+  @media(max-width:900px){
+    .float-card{ width:170px; padding:16px 18px; }
+    .float-card .fc-title{ font-size:0.95rem; }
+    .float-card.c1{ left:0; top:6%; }
+    .float-card.c2{ left:34%; top:46%; }
+    .float-card.c3{ left:58%; top:2%; }
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    padding:96px 0 0;
+    position:relative;
+    background:
+      radial-gradient(600px 300px at 85% -10%, var(--brass-glow), transparent 70%),
+      var(--paper);
+  }
+  .eyebrow{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:0.78rem;
+    color:var(--brass);
+    text-transform:uppercase;
+    letter-spacing:0.12em;
+    display:flex;align-items:center;gap:10px;
+    margin-bottom:22px;
+  }
+  body.lang-am .eyebrow{ font-family:'Noto Sans Ethiopic',monospace; text-transform:none; letter-spacing:0; }
+  .eyebrow::before{
+    content:'';
+    width:7px;height:7px;
+    background:var(--brass-bright);
+    display:inline-block;
+    animation:pulse 2.4s ease-in-out infinite;
+  }
+  @keyframes pulse{ 0%,100%{opacity:1;} 50%{opacity:0.35;} }
+  @media (prefers-reduced-motion:reduce){ .eyebrow::before{animation:none;} }
+
+  .hero h1{
+    font-size:clamp(2.4rem, 5vw, 4.1rem);
+    line-height:1.06;
+    font-weight:500;
+    max-width:820px;
+  }
+  body.lang-am .hero h1{ line-height:1.25; }
+  .hero h1 em{
+    font-style:italic;
+    font-weight:400;
+    color:var(--teal);
+  }
+  body.lang-am .hero h1 em{ font-style:normal; }
+  .hero p.lede{
+    max-width:560px;
+    font-size:1.12rem;
+    line-height:1.6;
+    color:var(--slate);
+    margin:26px 0 40px;
+  }
+  .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;}
+
+  /* ---------- SECTIONS ---------- */
+  section{padding:110px 0;}
+  .sec-head{
+    display:flex;justify-content:space-between;align-items:flex-end;
+    margin-bottom:56px; gap:24px; flex-wrap:wrap;
+  }
+  .sec-head h2{ font-size:clamp(1.8rem,3vw,2.5rem); font-weight:500; }
+  .sec-head .num{ font-family:'IBM Plex Mono',monospace; color:var(--brass); font-size:0.85rem; }
+  body.lang-am .sec-head .num{ font-family:'Noto Sans Ethiopic',monospace; }
+  .sec-head p{ color:var(--slate); max-width:420px; line-height:1.55; margin:0; }
+
+  /* ---------- SERVICES ---------- */
+  .services{background:var(--white);}
+  .svc-grid{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:24px;
+    perspective:1200px;
+  }
+  @media(max-width:820px){ .svc-grid{grid-template-columns:1fr;} }
+  .svc-card{
+    background:var(--white); padding:40px 34px; border-radius:14px;
+    box-shadow:0 2px 8px rgba(29,80,104,0.06), 0 18px 40px rgba(29,80,104,0.1);
+    transition:box-shadow .25s ease;
+    transform-style:preserve-3d;
+    will-change:transform;
+  }
+  .svc-card:hover{ box-shadow:0 8px 16px rgba(29,80,104,0.1), 0 30px 55px rgba(29,80,104,0.18); }
+  .svc-tag{
+    font-family:'IBM Plex Mono',monospace; font-size:0.75rem; color:var(--white); margin-bottom:18px;
+    display:inline-flex; align-items:center; justify-content:center;
+    width:32px; height:32px; border-radius:9px;
+    background:linear-gradient(145deg, var(--brass-bright), var(--brass));
+    box-shadow:0 4px 10px rgba(63,198,181,0.4);
+    transform:translateZ(20px);
+  }
+  .svc-card h3{ font-size:1.3rem; font-weight:500; margin-bottom:14px; transform:translateZ(14px); }
+  .svc-card p{ color:var(--slate); line-height:1.6; font-size:0.95rem; margin-bottom:20px; }
+  .svc-list{list-style:none;padding:0;margin:0;}
+  .svc-list li{ font-size:0.86rem; color:var(--ink-soft); padding:7px 0; border-top:1px solid var(--line); }
+  .svc-list li:first-child{border-top:none;}
+
+  /* ---------- PRODUCTS ---------- */
+  .products{background:var(--ink);color:var(--paper);}
+  .products .sec-head h2{color:var(--paper);}
+  .products .sec-head p{color:#AFD4D2;}
+  .products .num{color:var(--brass-bright);}
+  .prod-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; perspective:1200px; }
+  @media(max-width:820px){ .prod-grid{grid-template-columns:1fr;} }
+  .prod-card{
+    background:linear-gradient(160deg, var(--ink-soft), var(--ink));
+    border:1px solid #2E6577; padding:32px 28px; border-radius:14px;
+    transition:box-shadow .25s ease;
+    box-shadow:0 20px 40px rgba(5,20,30,0.35);
+    transform-style:preserve-3d;
+    will-change:transform;
+  }
+  .prod-card:hover{ box-shadow:0 30px 55px rgba(5,20,30,0.45), 0 0 0 1px var(--brass-bright); }
+  .prod-status{ display:inline-flex;align-items:center;gap:7px; font-family:'IBM Plex Mono',monospace; font-size:0.72rem; color:var(--mint); margin-bottom:20px; }
+  body.lang-am .prod-status{ font-family:'Noto Sans Ethiopic',monospace; }
+  .prod-status::before{ content:'';width:6px;height:6px;background:var(--mint); border-radius:50%; }
+  .prod-card h3{font-size:1.15rem;font-weight:500;margin-bottom:10px;color:var(--paper);}
+  .prod-card p{font-size:0.9rem;color:#AFD4D2;line-height:1.6;margin-bottom:20px;}
+  .prod-link{ font-family:'IBM Plex Mono',monospace; font-size:0.8rem; color:var(--brass-bright); border-bottom:1px solid transparent; }
+  body.lang-am .prod-link{ font-family:'Noto Sans Ethiopic',monospace; }
+  .prod-link:hover{border-bottom-color:var(--brass-bright);}
+
+  /* ---------- PROCESS ---------- */
+  .process{background:var(--paper);}
+  .proc-item{
+    display:grid; grid-template-columns:70px 200px 1fr; gap:24px;
+    padding:28px 0; border-top:1px solid var(--line); align-items:baseline;
+  }
+  .proc-item:last-child{border-bottom:1px solid var(--line);}
+  @media(max-width:700px){
+    .proc-item{grid-template-columns:50px 1fr;}
+    .proc-item h3{grid-column:2;}
+    .proc-item p{grid-column:1/-1;}
+  }
+  .proc-num{ font-family:'IBM Plex Mono',monospace; color:var(--brass); font-size:0.9rem; }
+  .proc-item h3{font-size:1.1rem;font-weight:500;}
+  .proc-item p{color:var(--slate);margin:0;font-size:0.92rem;line-height:1.55;}
+
+  /* ---------- CONTACT ---------- */
+  .contact{background:var(--white);border-top:1px solid var(--line);}
+  .contact-grid{ display:grid; grid-template-columns:1fr 1fr; gap:60px; }
+  @media(max-width:820px){ .contact-grid{grid-template-columns:1fr;gap:40px;} }
+  .contact h2{font-size:clamp(1.8rem,3vw,2.3rem);font-weight:500;margin-bottom:20px;}
+  .contact p.lede{color:var(--slate);line-height:1.6;max-width:420px;margin-bottom:32px;}
+  .info-row{ display:flex;justify-content:space-between; padding:16px 0; border-top:1px solid var(--line); font-size:0.92rem; }
+  .info-row:last-child{border-bottom:1px solid var(--line);}
+  .info-row span:first-child{color:var(--slate);}
+  .info-row span:last-child{font-family:'IBM Plex Mono',monospace;font-size:0.85rem;}
+  body.lang-am .info-row span:last-child{font-family:'Noto Sans Ethiopic',monospace;}
+
+  form{display:flex;flex-direction:column;gap:16px;}
+  input,textarea{
+    font-family:'Inter',sans-serif; font-size:0.95rem; padding:14px 16px;
+    border:1px solid var(--line); background:var(--paper); color:var(--ink);
+  }
+  input:focus,textarea:focus{ outline:2px solid var(--teal); outline-offset:1px; }
+  textarea{resize:vertical;min-height:110px;}
+
+  /* ---------- FOOTER ---------- */
+  footer{ background:var(--onyx); color:#9BC7C5; position:relative; }
+  footer::before{
+    content:''; position:absolute; top:0; left:0; right:0; height:2px;
+    background:linear-gradient(90deg, transparent, var(--brass-bright), transparent);
+  }
+  .foot-top{ padding:72px 0 48px; display:grid; grid-template-columns:1.4fr 1fr 1fr 1.1fr; gap:40px; }
+  @media(max-width:900px){ .foot-top{grid-template-columns:1fr 1fr; row-gap:36px;} }
+  @media(max-width:560px){ .foot-top{grid-template-columns:1fr;} }
+  .foot-brand .logo{ margin-bottom:16px; }
+  .foot-brand .logo img{ filter:brightness(0) invert(1); height:34px; }
+  .foot-brand p{ font-size:0.9rem; line-height:1.6; max-width:280px; color:#8AB8B7; margin:0 0 22px; }
+  .foot-social{ display:flex; gap:10px; }
+  .foot-social a{
+    width:34px;height:34px; border:1px solid #2E6577;
+    display:flex;align-items:center;justify-content:center;
+    color:#9BC7C5; transition:all .15s ease;
+  }
+  .foot-social a:hover{ border-color:var(--brass-bright); color:var(--brass-bright); }
+  .foot-col h4{
+    font-family:'IBM Plex Mono',monospace; font-size:0.74rem; text-transform:uppercase;
+    letter-spacing:0.08em; color:var(--brass-bright); margin:0 0 18px; font-weight:500;
+  }
+  body.lang-am .foot-col h4{ font-family:'Noto Sans Ethiopic',monospace; text-transform:none; letter-spacing:0; }
+  .foot-col ul{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:12px; }
+  .foot-col a{ font-size:0.9rem; color:#AFD4D2; }
+  .foot-col a:hover{ color:var(--white); }
+  .foot-col .info-item{ font-size:0.88rem; color:#AFD4D2; line-height:1.5; }
+  .foot-col .info-item span{ display:block; color:#6FA0A0; font-size:0.76rem; font-family:'IBM Plex Mono',monospace; margin-bottom:3px; }
+  .foot-bottom{
+    border-top:1px solid #1B4557; padding:24px 0;
+    display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;
+    font-size:0.82rem; color:#6FA0A0;
+  }
+  .foot-bottom-links{ display:flex; gap:22px; }
+  .foot-bottom-links a:hover{ color:var(--paper); }
+
+  .reveal{ opacity:0; transform:translateY(14px); transition:opacity .6s ease, transform .6s ease; }
+  .reveal.in{opacity:1;transform:none;}
+  @media (prefers-reduced-motion:reduce){ .reveal{opacity:1;transform:none;transition:none;} }
+
+  /* ---------- CHAT WIDGET ---------- */
+  #chat-launcher{
+    position:fixed; bottom:26px;right:26px; width:58px;height:58px;
+    background:var(--ink); color:var(--brass-bright); border:none; cursor:pointer;
+    display:flex;align-items:center;justify-content:center; z-index:200;
+    box-shadow:0 8px 24px rgba(8,21,39,0.32);
+    transition:transform .18s ease, background .18s ease;
+  }
+  #chat-launcher:hover{ transform:translateY(-2px); background:var(--ink-soft); }
+  #chat-launcher svg{ width:24px;height:24px; }
+  #chat-launcher .dot{
+    position:absolute;top:-3px;right:-3px; width:12px;height:12px;
+    background:var(--brass-bright); border:2px solid var(--paper); border-radius:50%;
+  }
+  @media (prefers-reduced-motion:no-preference){ #chat-launcher .dot{ animation:pulse 2.4s ease-in-out infinite; } }
+
+  #chat-panel{
+    position:fixed; bottom:96px;right:26px; width:360px; max-width:calc(100vw - 40px);
+    height:480px; max-height:calc(100vh - 140px);
+    background:var(--white); border:1px solid var(--line);
+    box-shadow:0 20px 50px rgba(8,21,39,0.26);
+    display:flex; flex-direction:column; z-index:200;
+    opacity:0; transform:translateY(16px) scale(0.98); pointer-events:none;
+    transition:opacity .2s ease, transform .2s ease;
+  }
+  #chat-panel.open{ opacity:1; transform:none; pointer-events:auto; }
+  .chat-head{ background:var(--ink); color:var(--paper); padding:18px 20px; display:flex; align-items:center; justify-content:space-between; }
+  .chat-head-info{ display:flex; align-items:center; gap:10px; }
+  .chat-head-info .avatar{
+    width:32px;height:32px; background:var(--brass-bright); color:var(--ink);
+    display:flex;align-items:center;justify-content:center;
+    font-family:'IBM Plex Mono',monospace; font-size:0.72rem; font-weight:600;
+  }
+  .chat-head-info .name{ font-size:0.92rem; font-weight:600; margin:0; }
+  .chat-head-info .status{
+    font-family:'IBM Plex Mono',monospace; font-size:0.7rem; color:var(--mint); margin:0;
+    display:flex;align-items:center;gap:5px;
+  }
+  .chat-head-info .status::before{ content:''; width:6px;height:6px; background:var(--mint); border-radius:50%; }
+  #chat-close{ background:none;border:none;color:#AFD4D2;cursor:pointer; padding:4px; display:flex; }
+  #chat-close:hover{ color:var(--paper); }
+  .chat-body{ flex:1; padding:18px 16px; overflow-y:auto; display:flex; flex-direction:column; gap:12px; background:var(--paper-dim); }
+  .msg{ max-width:82%; padding:11px 14px; font-size:0.88rem; line-height:1.5; }
+  .msg.bot{ background:var(--white); border:1px solid var(--line); align-self:flex-start; border-radius:2px 10px 10px 10px; }
+  .msg.user{ background:var(--ink); color:var(--paper); align-self:flex-end; border-radius:10px 2px 10px 10px; }
+  .quick-replies{ display:flex; flex-wrap:wrap; gap:8px; align-self:flex-start; max-width:100%; }
+  .qr-btn{
+    font-family:'IBM Plex Mono',monospace; font-size:0.76rem; background:var(--white);
+    border:1px solid var(--brass); color:var(--ink-soft); padding:8px 12px; cursor:pointer;
+    transition:background .15s ease, color .15s ease;
+  }
+  .qr-btn:hover{ background:var(--brass-bright); color:var(--ink); border-color:var(--brass-bright); }
+  .typing{ display:flex; gap:4px; align-self:flex-start; background:var(--white); border:1px solid var(--line); padding:12px 14px; border-radius:2px 10px 10px 10px; }
+  .typing span{ width:6px;height:6px;background:var(--slate);border-radius:50%; animation:bounce 1.2s infinite ease-in-out; }
+  .typing span:nth-child(2){ animation-delay:0.15s; }
+  .typing span:nth-child(3){ animation-delay:0.3s; }
+  @keyframes bounce{ 0%,60%,100%{transform:translateY(0);} 30%{transform:translateY(-4px);} }
+  .chat-input-row{ display:flex; border-top:1px solid var(--line); background:var(--white); }
+  #chat-input{ flex:1; border:none; padding:14px 16px; font-family:inherit; font-size:0.9rem; background:transparent; }
+  #chat-input:focus{ outline:none; }
+  #chat-send{ border:none; background:none; color:var(--brass); cursor:pointer; padding:0 18px; display:flex;align-items:center; }
+  #chat-send:hover{ color:var(--brass-bright); }
+  @media(max-width:480px){
+    #chat-panel{ right:20px; bottom:90px; width:calc(100vw - 40px); }
+    #chat-launcher{ right:20px; bottom:20px; }
+  }
+
+  /* ---------- STATS STRIP ---------- */
+  .stats-strip {
+    background: var(--white);
+    border-bottom: 1px solid var(--line);
+    padding: 60px 0;
+  }
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    text-align: center;
+  }
+  @media(max-width:768px) {
+    .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  }
+  .stat-card h3 {
+    font-size: 2.8rem;
+    color: var(--ink);
+    margin-bottom: 8px;
+    font-weight: 700;
+  }
+  .stat-card p {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.85rem;
+    color: var(--slate);
+    margin: 0;
+    text-transform: uppercase;
+  }
+
+  /* ---------- ABOUT / WHY US ---------- */
+  .about {
+    background: var(--paper);
+    border-bottom: 1px solid var(--line);
+  }
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+  @media(max-width:820px) {
+    .about-grid { grid-template-columns: 1fr; gap: 40px; }
+  }
+  .about-content h2 {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    margin-bottom: 20px;
+  }
+  .about-content p {
+    color: var(--slate);
+    line-height: 1.7;
+    margin-bottom: 30px;
+  }
+  .about-features {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .about-feat-item {
+    display: flex;
+    gap: 20px;
+  }
+  .about-feat-icon {
+    width: 48px;
+    height: 48px;
+    background: var(--brass-glow);
+    color: var(--brass);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border-radius: 8px;
+    flex-shrink: 0;
+  }
+  .about-feat-text h4 {
+    font-size: 1.1rem;
+    margin: 0 0 6px 0;
+    color: var(--ink);
+  }
+  .about-feat-text p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--slate);
+    line-height: 1.5;
+  }
+
+  /* ---------- TESTIMONIALS ---------- */
+  .testimonials {
+    background: var(--white);
+    border-bottom: 1px solid var(--line);
+  }
+  .test-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+  @media(max-width:820px) {
+    .test-grid { grid-template-columns: 1fr; }
+  }
+  .test-card {
+    background: var(--paper);
+    padding: 36px;
+    border-radius: 12px;
+    border: 1px solid var(--line);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .test-quote {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--ink-soft);
+    margin-bottom: 24px;
+    font-style: italic;
+  }
+  .test-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .test-avatar {
+    width: 40px;
+    height: 40px;
+    background: var(--ink);
+    color: var(--brass-bright);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+  .test-name {
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+  .test-role {
+    font-size: 0.8rem;
+    color: var(--slate);
+  }
+
+
+  /* ---------- FAQ ---------- */
+  .faq {
+    background: var(--paper-dim);
+  }
+  .faq-accordion {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .faq-card {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .faq-header {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 20px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: var(--ink);
+  }
+  .faq-header .icon {
+    font-size: 1.2rem;
+    color: var(--brass);
+    transition: transform 0.2s ease;
+  }
+  .faq-card.open .faq-header .icon {
+    transform: rotate(45deg);
+  }
+  .faq-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.25s cubic-bezier(0, 1, 0, 1);
+  }
+  .faq-card.open .faq-content {
+    max-height: 1000px;
+    transition: max-height 0.5s ease-in-out;
+  }
+  .faq-content p {
+    padding: 0 24px 20px;
+    margin: 0;
+    font-size: 0.92rem;
+    color: var(--slate);
+    line-height: 1.6;
+  }
+
+  /* ---------- SCROLL TO TOP ---------- */
+  #scroll-top {
+    position: fixed;
+    bottom: 26px;
+    right: 96px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--white);
+    color: var(--ink);
+    border: 1px solid var(--line);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s, visibility 0.2s, transform 0.2s;
+  }
+  #scroll-top.show {
+    opacity: 1;
+    visibility: visible;
+  }
+  #scroll-top:hover {
+    transform: translateY(-3px);
+    background: var(--paper);
+  }
+  @media(max-width:480px){
+    #scroll-top{ right:88px; bottom:20px; }
+  }
+
+  /* ---------- TRUST BADGES / WHY CHOOSE US ---------- */
+  .trust-section {
+    background: var(--white);
+    border-bottom: 1px solid var(--line);
+    padding: 70px 0;
+  }
+  .trust-badges {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-top: 50px;
+  }
+  @media(max-width:900px) {
+    .trust-badges { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media(max-width:480px) {
+    .trust-badges { grid-template-columns: 1fr; }
+  }
+  .trust-badge {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 28px 20px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: var(--paper);
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  .trust-badge:hover {
+    border-color: var(--brass);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+  }
+  .trust-badge-icon {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    background: var(--brass-glow);
+    color: var(--brass);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+  }
+  .trust-badge-text h4 {
+    font-size: 1rem;
+    margin: 0 0 6px 0;
+    color: var(--ink);
+  }
+  .trust-badge-text p {
+    font-size: 0.85rem;
+    color: var(--slate);
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  /* ---------- INDUSTRIES ---------- */
+  .industries {
+    background: var(--ink);
+    color: var(--white);
+    padding: 80px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .industries .sec-head .num { color: var(--brass); }
+  .industries .sec-head h2 { color: var(--white); }
+  .industries .sec-head p { color: rgba(255,255,255,0.55); }
+  .industry-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 40px;
+  }
+  .industry-pill {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 22px;
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--white);
+    background: rgba(255,255,255,0.05);
+    transition: border-color 0.2s, background 0.2s;
+    cursor: default;
+  }
+  .industry-pill:hover {
+    border-color: var(--brass);
+    background: var(--brass-glow);
+    color: var(--brass-bright);
+  }
+  .industry-pill-icon {
+    font-size: 1.1rem;
+  }
+  .industry-counters {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 60px;
+    padding-top: 50px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+  @media(max-width:768px) {
+    .industry-counters { grid-template-columns: repeat(2,1fr); gap: 20px; }
+  }
+  .ind-counter h3 {
+    font-size: 2.6rem;
+    font-weight: 700;
+    color: var(--brass-bright);
+    margin-bottom: 6px;
+  }
+  .ind-counter p {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    margin: 0;
+  }
+
+  /* ---------- WORKING PROCESS (3-STEP) ---------- */
+  .working-process {
+    background: var(--paper);
+    border-bottom: 1px solid var(--line);
+    padding: 80px 0;
+  }
+  .working-process .sec-head .eyebrow-tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.78rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--brass);
+    margin-bottom: 10px;
+  }
+  .wp-steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 36px;
+    margin-top: 50px;
+  }
+  @media(max-width:820px) {
+    .wp-steps { grid-template-columns: 1fr; }
+  }
+  .wp-step {
+    position: relative;
+    padding: 36px 30px;
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    text-align: center;
+    transition: box-shadow 0.25s;
+  }
+  .wp-step:hover {
+    box-shadow: 0 8px 28px rgba(0,0,0,0.08);
+  }
+  .wp-step-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: var(--brass-glow);
+    color: var(--brass);
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+  .wp-step h3 {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+    color: var(--ink);
+  }
+  .wp-step p {
+    font-size: 0.9rem;
+    color: var(--slate);
+    line-height: 1.6;
+    margin: 0;
+  }
+  .wp-connector {
+    position: absolute;
+    top: 50%;
+    right: -20px;
+    width: 40px;
+    height: 2px;
+    background: var(--line);
+    display: none;
+  }
+  @media(min-width:821px) {
+    .wp-step:not(:last-child) .wp-connector { display: block; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav-inner">
+    <a href="#" class="logo">
+      <img src="https://yayetech.com/wp-content/uploads/2024/10/cropped-cropped-cropped-cropped-YayeTechlogo4.png"
+           alt="YayeTech"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+      <span class="mark-fallback">YT</span>
+    </a>
+    <nav class="links">
+      <a href="#services" data-i18n="nav.services">Services</a>
+      <a href="#products" data-i18n="nav.products">Products</a>
+      <a href="#process" data-i18n="nav.process">Process</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
+    </nav>
+    <div class="nav-right">
+      <div id="lang-toggle">
+        <button data-lang="en" class="active">EN</button>
+      </div>
+      <a href="#contact" class="btn brass nav-cta" data-i18n="nav.cta" id="nav-cta-desktop">Get Started</a>
+      <button id="menu-btn" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div id="mobile-menu">
+    <a href="#services" data-i18n="nav.services">Services</a>
+    <a href="#products" data-i18n="nav.products">Products</a>
+    <a href="#process" data-i18n="nav.process">Process</a>
+    <a href="#contact" data-i18n="nav.contact">Contact</a>
+    <a href="#contact" class="btn brass" data-i18n="nav.cta">Get Started</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div class="hero-copy">
+      <div class="eyebrow mono" data-i18n="hero.eyebrow">Addis Ababa - Available for new engagements</div>
+      <h1 data-i18n-html="hero.title">We build the systems<br>your business <em>runs</em> on.</h1>
+      <p class="lede" data-i18n="hero.lede">YayeTech designs and ships web platforms, blockchain-based applications, and the cloud infrastructure to keep them running - for businesses across Ethiopia and the diaspora.</p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn brass" data-i18n="hero.cta1">Get a proposal</a>
+        <a href="#products" class="btn outline" data-i18n="hero.cta2">See what we've shipped</a>
+      </div>
+    </div>
+    <div class="hero-3d" aria-label="YayeTech service stack">
+      <div class="hero-3d-stage">
+        <article class="float-card c1" style="--tz:60px;--ry:-8deg;--rx:4deg;">
+          <span class="fc-tag">WEB / IN SERVICE</span>
+          <div class="fc-title">Websites &amp; web apps</div>
+        </article>
+        <article class="float-card c2" style="--tz:110px;--ry:-4deg;--rx:-3deg;">
+          <span class="fc-tag">CHN / IN SERVICE</span>
+          <div class="fc-title">Web3 &amp; blockchain</div>
+        </article>
+        <article class="float-card c3" style="--tz:30px;--ry:10deg;--rx:3deg;">
+          <span class="fc-tag">CLD / IN SERVICE</span>
+          <div class="fc-title">Cloud &amp; hosting</div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STATS STRIP ============ -->
+<section class="stats-strip">
+  <div class="wrap">
+    <div class="stats-grid">
+      <div class="stat-card reveal">
+        <h3 class="mono">50+</h3>
+        <p data-i18n="stats.projects">Projects Shipped</p>
+      </div>
+      <div class="stat-card reveal">
+        <h3 class="mono">3</h3>
+        <p data-i18n="stats.disciplines">Core Disciplines</p>
+      </div>
+      <div class="stat-card reveal">
+        <h3 class="mono">3</h3>
+        <p data-i18n="stats.products">Live Products</p>
+      </div>
+      <div class="stat-card reveal">
+        <h3 class="mono">3+</h3>
+        <p data-i18n="stats.years">Years Experience</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div>
+        <div class="num mono" data-i18n="services.num">01 / SERVICES</div>
+        <h2 data-i18n="services.title">Three disciplines, one team.</h2>
+      </div>
+      <p data-i18n="services.desc">Most agencies specialize in one lane. We keep web, chain, and infrastructure under the same roof, so nothing gets lost in translation between teams.</p>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="svc-grid">
+      <div class="svc-card reveal">
+        <span class="svc-tag mono">01</span>
+        <h3 data-i18n="services.web.title">Web Development</h3>
+        <p data-i18n="services.web.desc">Custom sites and web applications built on modern frameworks, designed to be fast, maintainable, and easy for your team to update.</p>
+        <ul class="svc-list">
+          <li data-i18n="services.web.li1">Marketing &amp; e-commerce sites</li>
+          <li data-i18n="services.web.li2">Internal tools &amp; dashboards</li>
+          <li data-i18n="services.web.li3">Progressive web apps</li>
+        </ul>
+      </div>
+      <div class="svc-card reveal">
+        <span class="svc-tag mono">02</span>
+        <h3 data-i18n="services.chn.title">Web3 &amp; Blockchain</h3>
+        <p data-i18n="services.chn.desc">Smart contract development and DeFi tooling, built with security review baked into the process rather than bolted on at the end.</p>
+        <ul class="svc-list">
+          <li data-i18n="services.chn.li1">Smart contract development</li>
+          <li data-i18n="services.chn.li2">DeFi protocols &amp; integrations</li>
+          <li data-i18n="services.chn.li3">Wallet &amp; token infrastructure</li>
+        </ul>
+      </div>
+      <div class="svc-card reveal">
+        <span class="svc-tag mono">03</span>
+        <h3 data-i18n="services.cld.title">Cloud &amp; Hosting</h3>
+        <p data-i18n="services.cld.desc">Infrastructure setup and ongoing management, so your applications stay online and your team stays out of the server room.</p>
+        <ul class="svc-list">
+          <li data-i18n="services.cld.li1">Managed hosting &amp; deployment</li>
+          <li data-i18n="services.cld.li2">Scaling &amp; performance tuning</li>
+          <li data-i18n="services.cld.li3">Monitoring &amp; incident response</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="products" id="products">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div>
+        <div class="num mono" data-i18n="products.num">02 / PRODUCTS</div>
+        <h2 data-i18n="products.title">Built and running today.</h2>
+      </div>
+      <p data-i18n="products.desc">Alongside client work, we build and operate our own products - proof that we build things meant to last, not just meant to ship.</p>
+    </div>
+    <div class="prod-grid">
+      <div class="prod-card reveal">
+        <div class="prod-status mono" data-i18n="products.live">LIVE</div>
+        <h3>YayeTech ERP</h3>
+        <p data-i18n="products.erp.desc">An operations platform for growing businesses to manage inventory, sales, and reporting from one place.</p>
+        <a href="https://erp.yayetech.com" class="prod-link mono" data-i18n="products.view">View product -></a>
+      </div>
+      <div class="prod-card reveal">
+        <div class="prod-status mono" data-i18n="products.live">LIVE</div>
+        <h3>AbayHost</h3>
+        <p data-i18n="products.host.desc">Managed hosting for Ethiopian businesses, with local support and pricing that makes sense for the market.</p>
+        <a href="abayhost.html" class="prod-link mono">abayhost.com -></a>
+      </div>
+      <div class="prod-card reveal">
+        <div class="prod-status mono" data-i18n="products.live">LIVE</div>
+        <h3>AbayEdge</h3>
+        <p data-i18n="products.edge.desc">A trading journal web app for tracking positions, reviewing performance, and building better trading habits.</p>
+        <a href="https://abayedge.com" class="prod-link mono">abayedge.com -></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRUST BADGES / WHY CHOOSE US ============ -->
+<section class="trust-section" id="why-us">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div>
+        <div class="num mono" data-i18n="trust.num">03 / WHY CHOOSE US</div>
+        <h2 data-i18n="trust.title">Why Businesses Trust YayeTech</h2>
+      </div>
+      <p data-i18n="trust.desc">We combine technical depth with a genuine understanding of the Ethiopian market, so projects are built for how local and diaspora businesses actually operate.</p>
+    </div>
+    <div class="trust-badges">
+      <div class="trust-badge reveal">
+        <div class="trust-badge-icon">ET</div>
+        <div class="trust-badge-text">
+          <h4 data-i18n="trust.b1.title">Local Market Knowledge</h4>
+          <p data-i18n="trust.b1.desc">Built around Ethiopian business needs, payment realities, and support expectations.</p>
+        </div>
+      </div>
+      <div class="trust-badge reveal">
+        <div class="trust-badge-icon">FS</div>
+        <div class="trust-badge-text">
+          <h4 data-i18n="trust.b2.title">Full-Stack Delivery</h4>
+          <p data-i18n="trust.b2.desc">One team covers product design, engineering, integrations, launch, and handoff.</p>
+        </div>
+      </div>
+      <div class="trust-badge reveal">
+        <div class="trust-badge-icon">CL</div>
+        <div class="trust-badge-text">
+          <h4 data-i18n="trust.b3.title">Cloud Operations</h4>
+          <p data-i18n="trust.b3.desc">Deployment, hosting, monitoring, and scaling stay part of the delivery plan.</p>
+        </div>
+      </div>
+      <div class="trust-badge reveal">
+        <div class="trust-badge-icon">AM</div>
+        <div class="trust-badge-text">
+          <h4 data-i18n="trust.b4.title">Bilingual Support</h4>
+          <p data-i18n="trust.b4.desc">English and Amharic content support helps teams serve local and diaspora users.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="process" id="process">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div>
+        <div class="num mono" data-i18n="process.num">04 / PROCESS</div>
+        <h2 data-i18n="process.title">How an engagement runs.</h2>
+      </div>
+      <p data-i18n="process.desc">Four stages, start to finish. You'll know what's happening at every point along the way.</p>
+    </div>
+    <div class="proc-list">
+      <div class="proc-item reveal">
+        <div class="proc-num mono">01</div>
+        <h3 data-i18n="process.discover.title">Discover</h3>
+        <p data-i18n="process.discover.desc">We learn your business, your users, and what "done" actually looks like before any code gets written.</p>
+      </div>
+      <div class="proc-item reveal">
+        <div class="proc-num mono">02</div>
+        <h3 data-i18n="process.build.title">Build</h3>
+        <p data-i18n="process.build.desc">Work happens in short cycles with regular check-ins, so there are no surprises at the end.</p>
+      </div>
+      <div class="proc-item reveal">
+        <div class="proc-num mono">03</div>
+        <h3 data-i18n="process.launch.title">Launch</h3>
+        <p data-i18n="process.launch.desc">We handle deployment, testing, and the operational details of going live.</p>
+      </div>
+      <div class="proc-item reveal">
+        <div class="proc-num mono">04</div>
+        <h3 data-i18n="process.support.title">Support</h3>
+        <p data-i18n="process.support.desc">Ongoing hosting, monitoring, and updates, so the thing you launched keeps working.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="testimonials" id="testimonials">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div>
+        <div class="num mono" data-i18n="testimonials.num">05 / CLIENTS</div>
+        <h2 data-i18n="testimonials.title">What our partners say.</h2>
+      </div>
+      <p data-i18n="testimonials.desc">We value long-term partnerships over short-term projects. Here is what leading teams say about working with us.</p>
+    </div>
+    <div class="test-grid">
+      <div class="test-card reveal">
+        <div class="test-quote" data-i18n="test1.quote">"YayeTech delivered our web portal ahead of schedule and optimized our cloud costs by 40%. Their technical expertise is stellar."</div>
+        <div class="test-author">
+          <div class="test-avatar">KB</div>
+          <div>
+            <div class="test-name">Dagim</div>
+            <div class="test-role" data-i18n="test1.role">CEO, Kifiya Partner</div>
+          </div>
+        </div>
+      </div>
+      <div class="test-card reveal">
+        <div class="test-quote" data-i18n="test2.quote">"Their blockchain and smart contract audits saved us from critical vulnerabilities. The absolute best Web3 engineering team in Addis."</div>
+        <div class="test-author">
+          <div class="test-avatar">MA</div>
+          <div>
+            <div class="test-name">Martha</div>
+            <div class="test-role" data-i18n="test2.role">Lead Blockchain Architect</div>
+          </div>
+        </div>
+      </div>
+      <div class="test-card reveal">
+        <div class="test-quote" data-i18n="test3.quote">"The customized ERP platform they built revolutionized our retail operations. Inventory management has never been this smooth."</div>
+        <div class="test-author">
+          <div class="test-avatar">YD</div>
+          <div>
+            <div class="test-name">Yosef</div>
+            <div class="test-role" data-i18n="test3.role">Operations Director</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div>
+        <div class="num mono" data-i18n="faq.num">06 / QUESTIONS</div>
+        <h2 data-i18n="faq.title">Frequently asked questions.</h2>
+      </div>
+      <p data-i18n="faq.desc">Find answers to common questions about our software development process, technologies, and pricing.</p>
+    </div>
+    
+    <div class="faq-accordion reveal">
+      <div class="faq-card">
+        <button class="faq-header">
+          <span data-i18n="faq.q1.title">What software engineering technologies do you use?</span>
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-content">
+          <p data-i18n="faq.q1.desc">We primarily build on modern web frameworks (React, Next.js, Vue, Node.js), smart contracts (Solidity, Rust), and reliable cloud platforms (AWS, GCP, and managed VPS architectures).</p>
+        </div>
+      </div>
+      
+      <div class="faq-card">
+        <button class="faq-header">
+          <span data-i18n="faq.q2.title">How long does a typical software project take?</span>
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-content">
+          <p data-i18n="faq.q2.desc">A standard corporate website or prototype takes 3-6 weeks, while complex web applications, enterprise ERP customizations, or custom DeFi protocols can take 2-4 months from discovery to launch.</p>
+        </div>
+      </div>
+      
+      <div class="faq-card">
+        <button class="faq-header">
+          <span data-i18n="faq.q3.title">Do you offer post-launch support and hosting?</span>
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-content">
+          <p data-i18n="faq.q3.desc">Yes. Through our hosting arm AbayHost and managed cloud services, we offer 24/7 uptime monitoring, server security maintenance, and monthly feature iteration contracts.</p>
+        </div>
+      </div>
+      
+      <div class="faq-card">
+        <button class="faq-header">
+          <span data-i18n="faq.q4.title">Can you audit our existing smart contracts?</span>
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-content">
+          <p data-i18n="faq.q4.desc">Yes. We conduct complete structural audits, static analysis, gas optimization profiling, and vulnerability checks for Ethereum/EVM-compatible solidity contracts.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="reveal">
+        <h2 data-i18n="contact.title">Let's talk about your project.</h2>
+        <p class="lede" data-i18n="contact.lede">Tell us what you're building. We'll get back to you with next steps, usually within a business day.</p>
+        <div class="info-row"><span data-i18n="contact.phone">Phone</span><span><a href="tel:+251988202020">+251 988 20 20 20</a></span></div>
+        <div class="info-row"><span data-i18n="contact.email">Email</span><span><a href="mailto:info@yayetech.com">info@yayetech.com</a></span></div>
+        <div class="info-row"><span data-i18n="contact.location">Location</span><span data-i18n="contact.location.val">Addis Ababa, Ethiopia</span></div>
+        <div class="info-row"><span data-i18n="contact.hours">Hours</span><span data-i18n="contact.hours.val">Mon-Fri, 9:00-18:00</span></div>
+      </div>
+      <form class="reveal" onsubmit="event.preventDefault(); this.reset(); alert('Thanks - we will be in touch shortly.');">
+        <input type="text" data-i18n-placeholder="form.name" placeholder="Full name" required>
+        <input type="email" data-i18n-placeholder="form.email" placeholder="Email address" required>
+        <input type="text" data-i18n-placeholder="form.company" placeholder="Company (optional)">
+        <textarea data-i18n-placeholder="form.message" placeholder="What are you building?" required></textarea>
+        <button type="submit" class="btn brass" style="align-self:flex-start;" data-i18n="form.send">Send message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-top">
+    <div class="foot-brand">
+      <a href="#" class="logo">
+        <img src="https://yayetech.com/wp-content/uploads/2024/10/cropped-cropped-cropped-cropped-YayeTechlogo4.png" alt="YayeTech"
+             onerror="this.style.display='none';">
+      </a>
+      <p data-i18n="footer.tagline">Building the web, blockchain, and cloud infrastructure behind Ethiopia's growing businesses.</p>
+      <div class="foot-social">
+        <a href="https://www.linkedin.com/company/yayetech" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.14 1.45-2.14 2.94v5.66H9.35V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></a>
+        <a href="https://x.com/yayetech" target="_blank" rel="noopener noreferrer" aria-label="X / Twitter"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-7.6 8.7L23.3 22h-7l-5.5-6.7L4.5 22H1.4l8.1-9.3L1 2h7.2l5 6.1L18.9 2zm-1.2 18h1.7L7.4 4H5.6l12.1 16z"/></svg></a>
+        <a href="https://t.me/yayetech" target="_blank" rel="noopener noreferrer" aria-label="Telegram"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.6 3.5 11.7c-1.3.5-1.3 1.2-.2 1.5l4.7 1.5 1.8 5.5c.2.6.4.8.9.8s.7-.2 1-.5l2.4-2.3 4.8 3.6c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.2-.5-1.8-1.8-1.3zM8.8 14.4l9.3-5.9c.4-.3.8-.1.5.2l-7.8 7.2-.3 3.1-1.7-4.6z"/></svg></a>
+      </div>
+    </div>
+    <div class="foot-col">
+      <h4 data-i18n="footer.quicklinks">Quick Links</h4>
+      <ul>
+        <li><a href="#services" data-i18n="nav.services">Services</a></li>
+        <li><a href="#products" data-i18n="nav.products">Products</a></li>
+        <li><a href="#process" data-i18n="nav.process">Process</a></li>
+        <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h4 data-i18n="services.num2">Services</h4>
+      <ul>
+        <li><a href="#services" data-i18n="services.web.title">Web Development</a></li>
+        <li><a href="#services" data-i18n="services.chn.title">Web3 &amp; Blockchain</a></li>
+        <li><a href="#services" data-i18n="services.cld.title">Cloud &amp; Hosting</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h4 data-i18n="footer.getintouch">Get in Touch</h4>
+      <div class="info-item"><span data-i18n="contact.phone">Phone</span>+251 988 20 20 20</div>
+      <br>
+      <div class="info-item"><span data-i18n="contact.location">Location</span><span data-i18n="contact.location.val">Addis Ababa, Ethiopia</span></div>
+      <br>
+      <div class="info-item"><span data-i18n="contact.hours">Hours</span><span data-i18n="contact.hours.val">Mon-Fri, 9:00-18:00</span></div>
+    </div>
+  </div>
+  <div class="wrap foot-bottom">
+    <div data-i18n="footer.copyright">(c) 2026 YayeTech. All rights reserved.</div>
+    <div class="foot-bottom-links">
+      <a href="#services" data-i18n="nav.services">Services</a>
+      <a href="#products" data-i18n="nav.products">Products</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ---------- SCROLL TO TOP BUTTON ---------- -->
+<button id="scroll-top" aria-label="Scroll to top">^</button>
+
+<!-- ---------- CHAT WIDGET ---------- -->
+<button id="chat-launcher" aria-label="Open contact assistant" aria-expanded="false">
+  <span class="dot"></span>
+  <svg id="icon-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+  <svg id="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="display:none;"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+</button>
+
+<div id="chat-panel" role="dialog" aria-label="Contact assistant for YayeTech">
+  <div class="chat-head">
+    <div class="chat-head-info">
+      <div class="avatar mono">YT</div>
+      <div>
+        <p class="name">YayeTech</p>
+        <p class="status mono" data-i18n="chat.online">Contact shortcut</p>
+      </div>
+    </div>
+    <button id="chat-close" aria-label="Close chat">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="chat-body" id="chat-body"></div>
+  <div class="chat-input-row">
+    <input id="chat-input" type="text" data-i18n-placeholder="chat.placeholder" placeholder="Type your message..." autocomplete="off">
+    <button id="chat-send" aria-label="Send message">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    </button>
+  </div>
+</div>
+
+<script>
+/* ================= TRANSLATIONS ================= */
+const I18N = {
+  en: {
+    "nav.services":"Services","nav.products":"Products","nav.process":"Process","nav.contact":"Contact","nav.cta":"Get Started",
+    "hero.eyebrow":"Addis Ababa - Available for new engagements",
+    "hero.lede":"YayeTech designs and ships web platforms, blockchain-based applications, and the cloud infrastructure to keep them running - for businesses across Ethiopia and the diaspora.",
+    "hero.cta1":"Get a proposal","hero.cta2":"See what we've shipped",
+    "ledger.web.title":"Websites & web apps","ledger.web.desc":"From marketing sites to full product platforms, built for speed and easy handoff.",
+    "ledger.chn.title":"Web3 & blockchain","ledger.chn.desc":"Smart contracts and decentralized applications, audited and built for real usage.",
+    "ledger.cld.title":"Cloud & hosting","ledger.cld.desc":"Infrastructure, deployment, and uptime, managed so you don't have to think about it.",
+    "ledger.status":"IN SERVICE",
+    "services.num":"01 / SERVICES","services.num2":"Services","services.title":"Three disciplines, one team.",
+    "services.desc":"Most agencies specialize in one lane. We keep web, chain, and infrastructure under the same roof, so nothing gets lost in translation between teams.",
+    "services.web.title":"Web Development","services.web.desc":"Custom sites and web applications built on modern frameworks, designed to be fast, maintainable, and easy for your team to update.",
+    "services.web.li1":"Marketing & e-commerce sites","services.web.li2":"Internal tools & dashboards","services.web.li3":"Progressive web apps",
+    "services.chn.title":"Web3 & Blockchain","services.chn.desc":"Smart contract development and DeFi tooling, built with security review baked into the process rather than bolted on at the end.",
+    "services.chn.li1":"Smart contract development","services.chn.li2":"DeFi protocols & integrations","services.chn.li3":"Wallet & token infrastructure",
+    "services.cld.title":"Cloud & Hosting","services.cld.desc":"Infrastructure setup and ongoing management, so your applications stay online and your team stays out of the server room.",
+    "services.cld.li1":"Managed hosting & deployment","services.cld.li2":"Scaling & performance tuning","services.cld.li3":"Monitoring & incident response",
+    "products.num":"02 / PRODUCTS","products.title":"Built and running today.",
+    "products.desc":"Alongside client work, we build and operate our own products - proof that we build things meant to last, not just meant to ship.",
+    "products.live":"LIVE","products.view":"View product ->",
+    "products.erp.desc":"An operations platform for growing businesses to manage inventory, sales, and reporting from one place.",
+    "products.host.desc":"Managed hosting for Ethiopian businesses, with local support and pricing that makes sense for the market.",
+    "products.edge.desc":"A trading journal web app for tracking positions, reviewing performance, and building better trading habits.",
+    "process.num":"04 / PROCESS","process.title":"How an engagement runs.",
+    "process.desc":"Four stages, start to finish. You'll know what's happening at every point along the way.",
+    "process.discover.title":"Discover","process.discover.desc":"We learn your business, your users, and what \u201cdone\u201d actually looks like before any code gets written.",
+    "process.build.title":"Build","process.build.desc":"Work happens in short cycles with regular check-ins, so there are no surprises at the end.",
+    "process.launch.title":"Launch","process.launch.desc":"We handle deployment, testing, and the operational details of going live.",
+    "process.support.title":"Support","process.support.desc":"Ongoing hosting, monitoring, and updates, so the thing you launched keeps working.",
+    "contact.title":"Let's talk about your project.","contact.lede":"Tell us what you're building. We'll get back to you with next steps, usually within a business day.",
+    "contact.phone":"Phone","contact.email":"Email","contact.location":"Location","contact.location.val":"Addis Ababa, Ethiopia","contact.hours":"Hours","contact.hours.val":"Mon-Fri, 9:00-18:00",
+    "form.name":"Full name","form.email":"Email address","form.company":"Company (optional)","form.message":"What are you building?","form.send":"Send message",
+    "footer.tagline":"Building the web, blockchain, and cloud infrastructure behind Ethiopia's growing businesses.",
+    "footer.quicklinks":"Quick Links","footer.getintouch":"Get in Touch","footer.copyright":"(c) 2026 YayeTech. All rights reserved.",
+    "chat.online":"Contact shortcut","chat.placeholder":"Type your message...",
+    "chat.greet1":"Hello, welcome to YayeTech.","chat.greet2":"Use this assistant as a quick guide, then send the contact form for a real reply.",
+    "chat.qr1":"Our services","chat.qr2":"See products","chat.qr3":"Get a quote","chat.qr4":"Contact info",
+    "chat.thanks":"Thanks. This assistant is a contact shortcut, so please use the form or email info@yayetech.com for a real reply.",
+    "stats.projects":"Projects Shipped","stats.disciplines":"Core Disciplines","stats.products":"Live Products","stats.years":"Years Experience",
+    
+    "testimonials.num":"05 / CLIENTS","testimonials.title":"What our partners say.","testimonials.desc":"We value long-term partnerships over short-term projects. Here is what leading teams say about working with us.","test1.quote":"\"YayeTech delivered our web portal ahead of schedule and optimized our cloud costs by 40%. Their technical expertise is stellar.\"","test1.role":"CEO, Kifiya Partner","test2.quote":"\"Their blockchain and smart contract audits saved us from critical vulnerabilities. The absolute best Web3 engineering team in Addis.\"","test2.role":"Lead Blockchain Architect","test3.quote":"\"The customized ERP platform they built revolutionized our retail operations. Inventory management has never been this smooth.\"","test3.role":"Operations Director",
+    "faq.num":"06 / QUESTIONS","faq.title":"Frequently asked questions.","faq.desc":"Find answers to common questions about our software development process, technologies, and pricing.","faq.q1.title":"What software engineering technologies do you use?","faq.q1.desc":"We primarily build on modern web frameworks (React, Next.js, Vue, Node.js), smart contracts (Solidity, Rust), and reliable cloud platforms (AWS, GCP, and managed VPS architectures).","faq.q2.title":"How long does a typical software project take?","faq.q2.desc":"A standard corporate website or prototype takes 3-6 weeks, while complex web applications, enterprise ERP customizations, or custom DeFi protocols can take 2-4 months from discovery to launch.","faq.q3.title":"Do you offer post-launch support and hosting?","faq.q3.desc":"Yes. Through our hosting arm AbayHost and managed cloud services, we offer 24/7 uptime monitoring, server security maintenance, and monthly feature iteration contracts.","faq.q4.title":"Can you audit our existing smart contracts?","faq.q4.desc":"Yes. We conduct complete structural audits, static analysis, gas optimization profiling, and vulnerability checks for Ethereum/EVM-compatible solidity contracts.",}
+};
+const HTML_KEYS = {
+  "hero.title": {
+    en: "We build the systems<br>your business <em>runs</em> on."
+  }
+};
+window.YT_LANG = 'en';
+
+function applyLang(lang){
+  window.YT_LANG = lang;
+  document.documentElement.lang = lang;
+  document.body.classList.toggle('lang-am', lang === 'am');
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const key = el.getAttribute('data-i18n');
+    if(I18N[lang] && I18N[lang][key] !== undefined){ el.textContent = I18N[lang][key]; }
+  });
+  document.querySelectorAll('[data-i18n-html]').forEach(el=>{
+    const key = el.getAttribute('data-i18n-html');
+    if(HTML_KEYS[key]){ el.innerHTML = HTML_KEYS[key][lang]; }
+  });
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el=>{
+    const key = el.getAttribute('data-i18n-placeholder');
+    if(I18N[lang] && I18N[lang][key] !== undefined){ el.placeholder = I18N[lang][key]; }
+  });
+  document.querySelectorAll('#lang-toggle button').forEach(b=>{
+    b.classList.toggle('active', b.getAttribute('data-lang') === lang);
+  });
+}
+
+document.querySelectorAll('#lang-toggle button').forEach(btn=>{
+  btn.addEventListener('click', ()=> applyLang(btn.getAttribute('data-lang')));
+});
+
+/* ---------- reveal on scroll ---------- */
+const items = document.querySelectorAll('.reveal');
+const io = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+  });
+}, {threshold:0.15});
+items.forEach(i=>io.observe(i));
+
+/* ---------- mobile menu ---------- */
+const menuBtn = document.getElementById('menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+menuBtn.addEventListener('click', ()=>{
+  const open = mobileMenu.classList.toggle('open');
+  menuBtn.classList.toggle('open', open);
+  menuBtn.setAttribute('aria-expanded', open);
+});
+mobileMenu.querySelectorAll('a').forEach(a=>{
+  a.addEventListener('click', ()=>{ mobileMenu.classList.remove('open'); menuBtn.classList.remove('open'); });
+});
+
+/* ---------- FAQ Accordion ---------- */
+document.querySelectorAll('.faq-header').forEach(header => {
+  header.addEventListener('click', () => {
+    const card = header.parentElement;
+    const open = card.classList.toggle('open');
+    document.querySelectorAll('.faq-card').forEach(c => {
+      if(c !== card) c.classList.remove('open');
+    });
+  });
+});
+
+
+/* ---------- Scroll To Top ---------- */
+const scrollTopBtn = document.getElementById('scroll-top');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 300) {
+    scrollTopBtn.classList.add('show');
+  } else {
+    scrollTopBtn.classList.remove('show');
+  }
+});
+scrollTopBtn.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+/* ---------- CHAT WIDGET ---------- */
+(function(){
+  const launcher = document.getElementById('chat-launcher');
+  const panel = document.getElementById('chat-panel');
+  const body = document.getElementById('chat-body');
+  const input = document.getElementById('chat-input');
+  const sendBtn = document.getElementById('chat-send');
+  const iconChat = document.getElementById('icon-chat');
+  const iconClose = document.getElementById('icon-close');
+  let opened = false;
+  let greeted = false;
+
+  function t(key){ return I18N[window.YT_LANG][key] || I18N.en[key]; }
+  function scrollToBottom(){ body.scrollTop = body.scrollHeight; }
+
+  function addMessage(text, from){
+    const div = document.createElement('div');
+    div.className = 'msg ' + from;
+    div.textContent = text;
+    body.appendChild(div);
+    scrollToBottom();
+  }
+
+  function addQuickReplies(){
+    const wrap = document.createElement('div');
+    wrap.className = 'quick-replies';
+    const keys = [['chat.qr1','services'],['chat.qr2','products'],['chat.qr3','quote'],['chat.qr4','contact']];
+    keys.forEach(([labelKey, intent])=>{
+      const btn = document.createElement('button');
+      btn.className = 'qr-btn mono';
+      btn.textContent = t(labelKey);
+      btn.addEventListener('click', ()=>{
+        addMessage(t(labelKey), 'user');
+        wrap.remove();
+        respond(intent);
+      });
+      wrap.appendChild(btn);
+    });
+    body.appendChild(wrap);
+    scrollToBottom();
+  }
+
+  function showTyping(callback){
+    const el = document.createElement('div');
+    el.className = 'typing';
+    el.innerHTML = '<span></span><span></span><span></span>';
+    body.appendChild(el);
+    scrollToBottom();
+    setTimeout(()=>{ el.remove(); callback(); }, 650);
+  }
+
+  function respond(intentOrText){
+    const text = intentOrText.toLowerCase();
+    let reply;
+    if(text.includes('service')) reply = "We work across three areas: web development, Web3/blockchain, and cloud hosting. Want details on a specific one?";
+    else if(text.includes('product')) reply = "We've built YayeTech ERP, AbayHost, and AbayEdge - all live and in use today. Check the Products section above.";
+    else if(text.includes('quote')||text.includes('price')||text.includes('cost')) reply = "Happy to put a quote together. Fill out the contact form and we'll get back within a business day.";
+    else if(text.includes('contact')||text.includes('phone')||text.includes('email')) reply = "You can reach us at +251 988 20 20 20 (Mon-Fri, 9:00-18:00), write to info@yayetech.com, or use the contact form on this page.";
+    else if(text.includes('web3')||text.includes('blockchain')||text.includes('crypto')) reply = "On the Web3 side, we build smart contracts, DeFi tooling, and wallet/token infrastructure. What are you building?";
+    else if(text.includes('hosting')||text.includes('cloud')||text.includes('server')) reply = "For cloud, we handle managed hosting, deployment, scaling, and monitoring.";
+    else if(text.includes('hello')||text.includes('hi')) reply = "Hello! Good to hear from you. What can I help you with today?";
+    else if(text.includes('thank')) reply = "You're welcome! Anything else I can help with?";
+    else reply = t('chat.thanks');
+    showTyping(()=> addMessage(reply, 'bot'));
+  }
+
+  function greet(){
+    if(greeted) return;
+    greeted = true;
+    showTyping(()=>{
+      addMessage(t('chat.greet1'), 'bot');
+      setTimeout(()=>{ addMessage(t('chat.greet2'), 'bot'); addQuickReplies(); }, 400);
+    });
+  }
+
+  function openChat(){
+    opened = true;
+    panel.classList.add('open');
+    launcher.setAttribute('aria-expanded','true');
+    iconChat.style.display='none'; iconClose.style.display='block';
+    greet();
+    setTimeout(()=>input.focus(), 200);
+  }
+  function closeChat(){
+    opened = false;
+    panel.classList.remove('open');
+    launcher.setAttribute('aria-expanded','false');
+    iconChat.style.display='block'; iconClose.style.display='none';
+  }
+
+  launcher.addEventListener('click', ()=> opened ? closeChat() : openChat());
+  document.getElementById('chat-close').addEventListener('click', closeChat);
+
+  function handleSend(){
+    const val = input.value.trim();
+    if(!val) return;
+    addMessage(val, 'user');
+    input.value = '';
+    respond(val);
+  }
+  sendBtn.addEventListener('click', handleSend);
+  input.addEventListener('keydown', (e)=>{ if(e.key === 'Enter') handleSend(); });
+})();
+</script>
+
+</body>
+</html>
